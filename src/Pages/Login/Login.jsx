@@ -6,9 +6,9 @@ import { AuthContext } from '../../Providers/AuthProvider';
 const Login = () => {
     const {logIn}= useContext(AuthContext);
     const location = useLocation();
-    const navigate = useNavigate();
+    //const navigate = useNavigate();
 
-const from = location.state?.from?.pathname || '/' ;
+//const from = location.state?.from?.pathname || '/' ;
 
     const handleLogin = event => {
         event.preventDefault();
