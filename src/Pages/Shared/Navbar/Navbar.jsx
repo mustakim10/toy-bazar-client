@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from '../../../assets/logo.png'
+import logo from '../../../assets/logo2.png'
 import { useContext } from "react";
 import { AuthContext } from "../../../Providers/AuthProvider";
 
@@ -18,14 +18,11 @@ const Navbar = () => {
 
   const navItems = <>
     <li><Link to='/'>Home</Link></li>
-    <li><Link>About</Link></li>
-    {
-      user?.email ? <>
-       <li><Link to="/bookings">My Bookings</Link></li>
-       <li><button onClick={handleLogOut}>LogOut</button></li>
-      </> 
-      : <li><Link to="/login">Login</Link> </li>
-    }
+    <li><Link>All Toys</Link></li>
+    <li><Link>My Toys</Link></li>
+    <li><Link>Add A Toy</Link></li>
+    <li><Link>Blogs</Link></li>
+    
   </>
 
     return (
@@ -40,8 +37,10 @@ const Navbar = () => {
             </ul>
           </div>
           <Link to="/" className="btn btn-ghost normal-case text-xl">
-            <img src={logo} alt="" />
+            <img className="w-1/2" src={logo} alt="" />
+            
           </Link>
+          <h1 className="text-3xl font-bold text-orange-500">Toy Bazar</h1>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -49,8 +48,13 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end">
-        <button className="btn btn-outline btn-warning">APOINTMENT</button>
-
+        {
+      user?.email ? <>
+       <li><Link to="/bookings">My Bookings</Link></li>
+       <li><button onClick={handleLogOut}>LogOut</button></li>
+      </> 
+      : <li><Link to="/login">Login</Link> </li>
+    }
         </div>
       </div>
     );

@@ -1,10 +1,10 @@
-import logo from '../../../assets/logo.png'
+import logo from '../../../assets/logo2.png'
 
 const Footer = () => {
     return (
         <footer className="footer p-10 bg-base-200 text-base-content">
   <div>
-    <img src={logo} alt="" />
+    <img className='w-1/2' src={logo} alt="" />
     <p>ACME Industries Ltd.<br/>Providing reliable tech since 1992</p>
   </div> 
   <div>
