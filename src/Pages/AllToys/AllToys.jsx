@@ -49,7 +49,7 @@ const AllToys = () => {
 
     return (
         <div>
-            <h2>all toys are coming : {name}</h2>
+            <h2 className="text-3xl font-bold my-14 text-center">All Toys</h2>
             
                        <form onSubmit={handleAllToys}>
                        <div className="md:grid md:grid-cols-2 gap-6">

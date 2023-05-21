@@ -3,6 +3,7 @@ import img from '../../assets/login.webp'
 import { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
 import useTitle from '../Hooks/useTitle';
+import GoogleLogin from './GoogleLogin';
 
 const Login = () => {
     const {logIn}= useContext(AuthContext);
@@ -65,7 +66,9 @@ const from = location.state?.from?.pathname || '/' ;
                         </div>
                         </form>
                         <p className='text-center my-5'>New to Cars Doctor <Link className='text-orange-500 font-bold' to="/signup">Sign Up</Link> </p>
+                        <GoogleLogin></GoogleLogin>
                     </div>
+                    
                 </div>
             </div>
         </div>
