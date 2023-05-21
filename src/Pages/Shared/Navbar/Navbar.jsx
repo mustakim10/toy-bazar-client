@@ -19,9 +19,16 @@ const Navbar = () => {
 
   const navItems = <>
     <li><Link to='/'>Home</Link></li>
-    <li><Link to="/allToys">All Toys</Link></li>
-    <li><Link to="/myToy">My Toys</Link></li>
+    
+    {
+      user?.email ? <>
+       <li><Link to="/allToys">All Toys</Link></li>
+    <li><Link to="/myToy/:id">My Toys</Link></li>
     <li><Link to="/addToy">Add A Toy</Link></li>
+       <li><button onClick={handleLogOut}>LogOut</button></li>
+      </> 
+      : <li><Link to="/login">Login</Link> </li>
+    }
     <li><Link to='/blogs'>Blogs</Link></li>
 
   </>
@@ -52,13 +59,7 @@ const Navbar = () => {
         {user &&
           <FaUserCircle className='me-2' style={{ fontSize: '2rem' }}></FaUserCircle>
         }
-        {
-          user?.email ? <>
-            
-            <li><button onClick={handleLogOut}>LogOut</button></li>
-          </>
-            : <li><Link to="/login">Login</Link> </li>
-        }
+       
       </div>
     </div>
   );
