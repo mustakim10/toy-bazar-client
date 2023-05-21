@@ -66,6 +66,13 @@ const AllToys = () => {
                             </div>
                             <div className="form-control">
                                 <label className="label">
+                                    <span className="label-text">Email</span>
+                                </label>
+                                <input type="text" name="email" defaultValue={user?.email} className="input input-bordered" />
+                               
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
                                     <span className="label-text">Category</span>
                                 </label>
                                 <input type="text" name="category" placeholder="Category" className="input input-bordered" />

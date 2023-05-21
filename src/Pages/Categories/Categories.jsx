@@ -13,7 +13,7 @@ const Categories = ({name,image,price,rating,id}) => {
 <p>Price: ${price}</p>
 <p>Rating: {rating}</p>
 <div className="card-actions">
-  <Link to={`/alltoys/${id}`}>
+  <Link to={`/allToys/${id}`}>
   <button className="btn btn-primary">View Details</button>
   </Link>
 </div>
