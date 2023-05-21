@@ -23,7 +23,7 @@ const Navbar = () => {
     {
       user?.email ? <>
        <li><Link to="/allToys">All Toys</Link></li>
-    <li><Link to="/myToy/:id">My Toys</Link></li>
+    <li><Link to="/myToy">My Toys</Link></li>
     <li><Link to="/addToy">Add A Toy</Link></li>
        <li><button onClick={handleLogOut}>LogOut</button></li>
       </> 
