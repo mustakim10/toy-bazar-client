@@ -23,6 +23,7 @@ const Collections = () => {
                 {
                     collections.map(categorie => <Categories
                     key={categorie._id}
+                    id={categorie._id}
                     name={categorie.name}
                     image={categorie.image}
                     price={categorie.price}

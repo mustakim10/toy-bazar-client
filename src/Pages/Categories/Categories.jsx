@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const Categories = ({name,image,price,rating}) => {
+const Categories = ({name,image,price,rating,id}) => {
   
   return (
     <div className="card w-96 bg-base-100 shadow-xl">
@@ -13,7 +13,7 @@ const Categories = ({name,image,price,rating}) => {
 <p>Price: ${price}</p>
 <p>Rating: {rating}</p>
 <div className="card-actions">
-  <Link to={`/book/`}>
+  <Link to={`/alltoys/${id}`}>
   <button className="btn btn-primary">View Details</button>
   </Link>
 </div>

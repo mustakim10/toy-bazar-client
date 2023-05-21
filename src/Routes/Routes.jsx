@@ -5,6 +5,7 @@ import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import Blogs from "../Pages/Blogs/Blogs";
 import Error from "../Pages/Error/Error";
+import AllToys from "../Pages/AllToys/AllToys";
 
 const router = createBrowserRouter([
     {
@@ -27,6 +28,11 @@ const router = createBrowserRouter([
        {
         path: 'blogs',
         element: <Blogs></Blogs>
+       },
+       {
+        path: 'alltoys/:id',
+        element: <AllToys></AllToys>,
+        loader: ({params}) => fetch(`http://localhost:5000/categories/${params.id}`)
        }
 
       ]
