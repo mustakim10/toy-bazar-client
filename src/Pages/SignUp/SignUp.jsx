@@ -2,8 +2,10 @@ import { useContext } from 'react';
 import img from '../../assets/login.webp'
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProvider';
+import useTitle from '../Hooks/useTitle';
 
 const SignUp = () => {
+    useTitle('SignUp')
 
     const {createUser} = useContext(AuthContext);
     const handleSignUp = event => {

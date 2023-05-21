@@ -2,10 +2,12 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import img from '../../assets/login.webp'
 import { useContext } from 'react';
 import { AuthContext } from '../../Providers/AuthProvider';
+import useTitle from '../Hooks/useTitle';
 
 const Login = () => {
     const {logIn}= useContext(AuthContext);
     const location = useLocation();
+    useTitle('Login');
     const navigate = useNavigate();
 
 const from = location.state?.from?.pathname || '/' ;

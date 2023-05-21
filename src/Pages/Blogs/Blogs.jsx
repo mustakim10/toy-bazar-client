@@ -1,5 +1,7 @@
+import useTitle from "../Hooks/useTitle";
 
 const Blogs = () => {
+    useTitle('Blogs')
     return (
         <div>
             <h2 className="text-3xl font-bold my-5">1. What is an access token and refresh token? How do they work and where should we store them on the client-side?</h2>

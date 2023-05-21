@@ -34,7 +34,7 @@ const router = createBrowserRouter([
        {
         path: 'allToys/:id',
         element: <PrivateRoute><AllToys></AllToys></PrivateRoute>,
-        loader: ({params}) => fetch(`http://localhost:5000/categories/${params.id}`)
+        loader: ({params}) => fetch(`https://toy-bazar-server-orcin.vercel.app/categories/${params.id}`)
        },
        {
         path: '/myToy',

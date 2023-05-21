@@ -1,10 +1,12 @@
 import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+import useTitle from "../Hooks/useTitle";
 
 const AllToys = () => {
     const toys = useLoaderData()
     const { name, price,image} = toys;
+    useTitle('AllToys')
     const {user} = useContext(AuthContext);
 
     const handleAllToys = event => {
@@ -28,7 +30,7 @@ const AllToys = () => {
         }
         console.log(myToy);
 
-        fetch('http://localhost:5000/myToys',{
+        fetch('https://toy-bazar-server-orcin.vercel.app/myToys',{
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

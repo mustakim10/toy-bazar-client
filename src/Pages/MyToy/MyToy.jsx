@@ -1,12 +1,14 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import ToyRow from "./ToyRow";
+import useTitle from "../Hooks/useTitle";
 
 const MyToy = () => {
     const {user} = useContext(AuthContext);
+    useTitle('MyToy')
     const [myToy,setMyToy] = useState([]);
 
-    const url = `http://localhost:5000/myToys?email=${user?.email}`;
+    const url = `https://toy-bazar-server-orcin.vercel.app/myToys?email=${user?.email}`;
     useEffect(() => {
         fetch(url)
         .then(res => res.json())
@@ -16,7 +18,7 @@ const MyToy = () => {
     const handleDelete = id => {
         const proceed = confirm('Are you sure you want to delete');
         if (proceed) {
-            fetch(`http://localhost:5000/myToys${id}`, {
+            fetch(`https://toy-bazar-server-orcin.vercel.app/myToys${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

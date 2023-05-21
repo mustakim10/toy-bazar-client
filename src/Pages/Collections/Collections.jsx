@@ -6,7 +6,7 @@ const Collections = () => {
     const [collections,setCollections] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/categories')
+        fetch('https://toy-bazar-server-orcin.vercel.app/categories')
         .then(res=>res.json())
         .then(data=>setCollections(data))
     },[])
